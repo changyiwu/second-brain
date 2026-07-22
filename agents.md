@@ -37,7 +37,7 @@ second-brain/
 | 層級 | 平台 | 位置 | 讀取時機 |
 |------|------|------|---------|
 | L1 | 本地（GDrive） | `agents.md`＋`handoff.md` | 每個 session |
-| L2 | GitHub | changyiwu/second-brain（私有） | 指定時 |
+| L2 | GitHub | changyiwu/second-brain（**公開**） | 指定時 |
 | L3 | Obsidian | `second-brain/專案工作流程.md` | 有需要時 |
 
 ## 相關位置
@@ -54,6 +54,9 @@ second-brain/
 - 修改前先確認計畫，優先保留原有資料結構
 
 ### 本專案特有的約定
+
+- **repo 是公開的。** 任何寫進 commit 的內容都是對外發布。不要放個人資料、實際檔案路徑以外的隱私資訊、或任何憑證。
+- **git 作者 email 固定用 `changyiwu@users.noreply.github.com`**（已設定在本專案的 local config），不要用真實 email。
 
 - **不加跨 repo 連結。** 這份指南必須能獨立執行；曾因為指向 `codex-lazy-packs` 而產生死連結（見指南內「踩坑 1」）。
 - **不綁定特定 agent。** 工具差異一律用佔位符＋對照表處理，不寫死某一家的路徑或功能名稱。
