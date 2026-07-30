@@ -18,14 +18,16 @@
 - [x] 階段二：改寫為通用版 v1.0（引入 `<AGENT_HOME>`／`<AGENT_RULES_FILE>` 佔位符與對照表）
 - [x] 階段三：五個資料夾改用數字前綴命名，解決 Obsidian 側邊欄排序分散問題
 - [x] 階段四：套用到實際 vault（`2ndbrain`），同步四個 agent 的全域設定
-- [ ] 階段五：補上 agent 對照表缺漏項（AntiGravity 的規則檔名與位置尚未確認）
-- [ ] 階段六：考慮是否對外發布（決定授權方式、是否附 README）
+- [x] 階段五：補上「橋接檔」缺口（vault 與全域各補一份 `CLAUDE.md`，指南新增 3-3、踩坑 7 與對應驗證項）
+- [ ] 階段六：補上 agent 對照表缺漏項（AntiGravity 的規則檔名與位置尚未確認）
+- [ ] 階段七：考慮是否對外發布（決定授權方式、是否附 README）
 
 ## 資料夾結構
 
 ```text
 second-brain/
 ├── agents.md              # 本檔：專案藍圖
+├── CLAUDE.md              # 橋接檔：@agents.md，供只讀 CLAUDE.md 的 Claude Code 使用
 ├── handoff.md             # 交接檔
 └── 第二大腦設定指南.md    # 專案主產出（唯一交付物）
 ```
@@ -44,6 +46,7 @@ second-brain/
 
 - 實際套用的 vault：`C:\Users\chang\我的雲端硬碟\2ndbrain`
 - 該 vault 的筆記規則：`2ndbrain/AGENTS.md`（唯一真實來源，四個 agent 共用）
+- 該 vault 的橋接檔：`2ndbrain/CLAUDE.md`（`@AGENTS.md` import，不放規則內容）
 - 各 agent 全域設定：`~/.claude/CLAUDE.md`、`~/.codex/AGENTS.md`、`~/.config/opencode/opencode.json`
 
 ## 工作約定
@@ -61,4 +64,6 @@ second-brain/
 - **不加跨 repo 連結。** 這份指南必須能獨立執行；曾因為指向 `codex-lazy-packs` 而產生死連結（見指南內「踩坑 1」）。
 - **不綁定特定 agent。** 工具差異一律用佔位符＋對照表處理，不寫死某一家的路徑或功能名稱。
 - **不確定的事實不要寫進對照表。** 規則檔放錯位置不會報錯、只會安靜失效，寫錯比留白更糟（見指南內「踩坑 5」）。
+- **規則只維護一份，其他檔名一律做橋接檔。** 橋接檔只放 import／指路，不複製規則內容，否則兩份必然分叉（見指南內「踩坑 6、7」）。
+- **檔案類的交接紀錄，寫之前先實際列一次目錄。** 寫「已建立」但檔案不存在，已發生過一次（`~/.claude/CLAUDE.md`）。
 - 改動指南後，若涉及資料夾命名或路徑，要同步檢查實際 vault 與四個 agent 的全域設定是否需要跟著改。
