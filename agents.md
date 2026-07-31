@@ -4,7 +4,7 @@
 
 ## 專案簡介
 
-維護一份不綁定特定 AI agent 的 Obsidian 第二大腦建置指南。這份文件要能被任何人、用任何 agent（Claude Code、Codex、Gemini CLI、opencode、Cursor、AntiGravity）獨立照做完成設定，因此**不依賴任何外部文件、不含跨 repo 連結**。
+維護一份不綁定特定 AI agent 的 Obsidian 第二大腦建置指南。這份文件要能被任何人、用任何 agent（Claude Code、Codex、opencode、Antigravity）獨立照做完成設定，因此**不依賴任何外部文件、不含跨 repo 連結**。
 
 本專案產出的是**文件本身**，不是程式。品質標準是「拿給沒有背景知識的人，他能照著做完」。
 
@@ -19,8 +19,9 @@
 - [x] 階段三：五個資料夾改用數字前綴命名，解決 Obsidian 側邊欄排序分散問題
 - [x] 階段四：套用到實際 vault（`2ndbrain`），同步四個 agent 的全域設定
 - [x] 階段五：補上「橋接檔」缺口（vault 與全域各補一份 `CLAUDE.md`，指南新增 3-3、踩坑 7 與對應驗證項）
-- [ ] 階段六：補上 agent 對照表缺漏項（AntiGravity 的規則檔名與位置尚未確認）
-- [ ] 階段七：考慮是否對外發布（決定授權方式、是否附 README）
+- [x] 階段六：收斂 agent 對照表為四家（移除 Gemini CLI 與 Cursor，查證 opencode 與 Antigravity 2.0 的規則檔），並補齊本機缺的兩份全域規則檔
+- [ ] 階段七：考慮把「設定檔 ≠ 規則檔」寫成指南的踩坑 8（`opencode.json` 存在讓缺口看起來像已完成）
+- [ ] 階段八：考慮是否對外發布（決定授權方式、是否附 README）
 
 ## 資料夾結構
 
@@ -47,7 +48,8 @@ second-brain/
 - 實際套用的 vault：`C:\Users\chang\我的雲端硬碟\2ndbrain`
 - 該 vault 的筆記規則：`2ndbrain/AGENTS.md`（唯一真實來源，四個 agent 共用）
 - 該 vault 的橋接檔：`2ndbrain/CLAUDE.md`（`@AGENTS.md` import，不放規則內容）
-- 各 agent 全域設定：`~/.claude/CLAUDE.md`、`~/.codex/AGENTS.md`、`~/.config/opencode/opencode.json`
+- 各 agent 全域規則檔：`~/.claude/CLAUDE.md`、`~/.codex/AGENTS.md`、`~/.config/opencode/AGENTS.md`、`~/.gemini/GEMINI.md`（Antigravity）
+- `~/.config/opencode/opencode.json` 管的是 MCP、provider 與權限，不是規則檔，兩者不要混為一談
 
 ## 工作約定
 
