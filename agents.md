@@ -63,6 +63,14 @@ second-brain/
 
 **本檔不要出現的東西**：❌ `## 最近進度`／逐次工作紀錄、❌ 決策理由與踩坑完整版。歷史寫 L3 筆記的〈🗓️ 最近更動紀錄〉〈🧠 決策紀錄〉〈🕳️ 踩坑筆記〉；踩過的坑只把**結論**收斂成一條祈使句寫進〈工作約定〉，原因留 L3。
 
+## 專案專屬規則（補充）
+
+- **設定檔存在會讓規則檔的缺口看起來像已完成**。opencode 的 `opencode.json` 把 MCP、provider、權限都設好了，看起來很完整，但**它不是規則檔**——opencode 的全域規則要另開 `~/.config/opencode/AGENTS.md`。藍圖曾把 `opencode.json` 列為「全域設定」，缺口因此躲了很久
+- **Antigravity 的家目錄是 `~/.gemini/`，不是 `~/.antigravity/`**（後者不存在）。它自 v1.20.5 起同時讀 `AGENTS.md` 與 `GEMINI.md`，所以 vault 端**不需要**替它做橋接檔
+- **vault 的筆記規則只維護 `2ndbrain/AGENTS.md` 一份**，各 agent 全域檔只記路徑、不重複定義規則；`2ndbrain/CLAUDE.md` 是橋接檔，只有 `@AGENTS.md`，**不要往裡面補規則內容**
+- **`2ndbrain` 內五處提到舊資料夾名的地方是歷史紀錄**（W29 週報、四份專案工作流程），刻意不改，**不要「順手修正」**
+- 對照表的四家都是查證過的（opencode 與 Antigravity 的欄位來自官方文件與 changelog，不是本機實測或推測）。新增任何一家前先查文件，不確定就留在「其他：查該工具文件」
+
 ## 工作約定
 
 - 任何 Agent、任何電腦：**開工先讀 `handoff.md`，收工必更新 `handoff.md`**
