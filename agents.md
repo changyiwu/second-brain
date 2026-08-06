@@ -21,12 +21,13 @@
 - [x] 階段五：補上「橋接檔」缺口（vault 與全域各補一份 `CLAUDE.md`，指南新增 3-3、踩坑 7 與對應驗證項）
 - [x] 階段六：收斂 agent 對照表為四家（移除 Gemini CLI 與 Cursor，查證 opencode 與 Antigravity 2.0 的規則檔），並補齊本機缺的兩份全域規則檔
 - [ ] 階段七：考慮把「設定檔 ≠ 規則檔」寫成指南的踩坑 8（`opencode.json` 存在讓缺口看起來像已完成）
-- [ ] 階段八：考慮是否對外發布（決定授權方式、是否附 README）
+- [ ] 階段八：考慮是否對外發布（README 已補；待決定授權方式）
 
 ## 資料夾結構
 
 ```text
 second-brain/
+├── README.md              # repo 門面：對外說明指南是什麼、怎麼用
 ├── agents.md              # 本檔：專案藍圖
 ├── CLAUDE.md              # 橋接檔：@agents.md，供只讀 CLAUDE.md 的 Claude Code 使用
 ├── handoff.md             # 交接檔
