@@ -67,7 +67,7 @@ second-brain/
 ## 專案專屬規則（補充）
 
 - **設定檔存在會讓規則檔的缺口看起來像已完成**。opencode 的 `opencode.json` 把 MCP、provider、權限都設好了，看起來很完整，但**它不是規則檔**——opencode 的全域規則要另開 `~/.config/opencode/AGENTS.md`。藍圖曾把 `opencode.json` 列為「全域設定」，缺口因此躲了很久
-- **Antigravity 的家目錄是 `~/.gemini/`，不是 `~/.antigravity/`**（後者不存在）。它自 v1.20.5 起同時讀 `AGENTS.md` 與 `GEMINI.md`，所以 vault 端**不需要**替它做橋接檔
+- **Antigravity 的家目錄是 `~/.gemini/`，不是 `~/.antigravity/`**（後者不存在）。它同時讀 `AGENTS.md` 與 `GEMINI.md`，但官方文件只在 `.agents/rules/` 的脈絡下描述工作區規則，**沒有明講工作區根目錄的 `AGENTS.md` 會被讀到**——vault 端要不要替它做 `GEMINI.md` 橋接檔，以實測結果為準，尚未驗（2026-08-06 查證，本機版本 2.5.0）。另外官方 changelog 把「支援讀 `AGENTS.md`」同一句重複列在 1.20.3／1.20.5／1.21.6，**版本號不可當判斷依據**
 - **vault 的筆記規則只維護 `2ndbrain/AGENTS.md` 一份**，各 agent 全域檔只記路徑、不重複定義規則；`2ndbrain/CLAUDE.md` 是橋接檔，只有 `@AGENTS.md`，**不要往裡面補規則內容**
 - **`2ndbrain` 內五處提到舊資料夾名的地方是歷史紀錄**（W29 週報、四份專案工作流程），刻意不改，**不要「順手修正」**
 - 對照表的四家都是查證過的（opencode 與 Antigravity 的欄位來自官方文件與 changelog，不是本機實測或推測）。新增任何一家前先查文件，不確定就留在「其他：查該工具文件」
