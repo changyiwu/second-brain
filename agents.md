@@ -82,7 +82,7 @@ second-brain/
 ### 本專案特有的約定
 
 - **repo 是公開的。** 任何寫進 commit 的內容都是對外發布。不要放個人資料、實際檔案路徑以外的隱私資訊、或任何憑證。
-- **git 作者 email 固定用 `changyiwu@users.noreply.github.com`**（已設定在本專案的 local config），不要用真實 email。
+- **git 作者 email 固定用 `changyiwu@users.noreply.github.com`**，不要用真實 email。2026-08-06 起改設在這台電腦的**全域** config（`~/.gitconfig`），本專案不再有 local 覆寫；換電腦時記得確認該機全域值，用 `git config --show-origin --get user.email` 查實際生效的來源。
 
 - **不加跨 repo 連結。** 這份指南必須能獨立執行；曾因為指向 `codex-lazy-packs` 而產生死連結（見指南內「踩坑 1」）。
 - **不綁定特定 agent。** 工具差異一律用佔位符＋對照表處理，不寫死某一家的路徑或功能名稱。
