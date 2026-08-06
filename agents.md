@@ -19,9 +19,10 @@
 - [x] 階段三：五個資料夾改用數字前綴命名，解決 Obsidian 側邊欄排序分散問題
 - [x] 階段四：套用到實際 vault（`2ndbrain`），同步四個 agent 的全域設定
 - [x] 階段五：補上「橋接檔」缺口（vault 與全域各補一份 `CLAUDE.md`，指南新增 3-3、踩坑 7 與對應驗證項）
-- [x] 階段六：收斂 agent 對照表為四家（移除 Gemini CLI 與 Cursor，查證 opencode 與 Antigravity 2.0 的規則檔），並補齊本機缺的兩份全域規則檔
+- [x] 階段六：收斂 agent 對照表為四家（移除 Gemini CLI 與 Cursor，查證 opencode 與 Antigravity 的規則檔），並補齊全域規則檔（`PC-YI-FY` 2026-07-31；`NB-YI` 2026-08-06 補齊四份）
 - [ ] 階段七：考慮把「設定檔 ≠ 規則檔」寫成指南的踩坑 8（`opencode.json` 存在讓缺口看起來像已完成）
 - [ ] 階段八：考慮是否對外發布（README 已補；待決定授權方式）
+- [ ] 階段九：**實測**驗證兩層規則檔在四個 agent 都真的生效（每台電腦各自驗；問「這個 vault 的筆記規則是什麼」，答得出 frontmatter 四欄才算數）。自階段五起一直掛在 `handoff.md` 的下一步卻沒被追蹤，升級成路線圖項目
 
 ## 資料夾結構
 
