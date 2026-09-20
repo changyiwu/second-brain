@@ -55,11 +55,11 @@
 second-brain/
 ├── README.md              # 本檔
 ├── 第二大腦設定指南.md    # 唯一交付物
-├── agents.md              # 專案藍圖（維護這份指南時給 agent 讀的）
-└── CLAUDE.md              # 橋接檔，內容只有 @agents.md
+├── AGENTS.md              # 專案藍圖（維護這份指南時給 agent 讀的）
+└── CLAUDE.md              # 橋接檔，內容只有 @AGENTS.md
 ```
 
-`agents.md` 與 `CLAUDE.md` 是維護這個 repo 用的，不是指南的一部分——**要照著設定第二大腦的人，只需要看 `第二大腦設定指南.md`**。
+`AGENTS.md` 與 `CLAUDE.md` 是維護這個 repo 用的，不是指南的一部分——**要照著設定第二大腦的人，只需要看 `第二大腦設定指南.md`**。
 
 ## 回饋
 
